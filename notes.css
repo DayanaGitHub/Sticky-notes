@@ -1,0 +1,76 @@
+*::before,*::after{
+    box-sizing: border-box;
+}
+
+body{
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #f1f1f1;
+}
+
+.container{
+    width: 20%;
+    position: relative;
+    padding: 30px;
+    top:50%;
+}
+
+.container .pinned {
+    position: relative;
+}
+
+.container .pinned i{
+    position: absolute;
+    bottom:-15px;
+    letter-spacing:50%; 
+    transform: translateX(-50%) rotate3d(1,1,1,45deg);
+    font-size: 3em;
+    color: black;
+    z-index: 1;
+}
+
+.container .pinned i::after{
+    content:"\f08d";
+    font-family: "fontAwesome";
+    position: absolute;
+    top:12px;
+    left:16px;
+    transform: rotate(55deg);
+    font-size: 1em;
+    color: rgba(0,0,0,.2);
+    filter: blur(4.5px);
+}
+
+.data-box{
+    padding:40px 0;
+    text-align: center;
+    position: relative;
+    border-bottom-right-radius: 25px;
+    overflow:hidden;
+    box-shadow: 29px 34px 36px -26px rgba(0,0,0,.5);
+    background: #9b59b9;
+
+}
+
+.content{
+    background: #fff;
+    padding:10px;
+    box-shadow: -1px 4px 16px 0px rgba(0,0,0,.5);
+}
+
+.data-box .date{
+    display: inline-block;
+    padding:10px 0;
+    font-size: large;
+}
+
+.data-box .icon{
+    padding:10px 0;
+}
+
+.data-box .icon img{
+    width:100px;
+    height:100px;
+}
